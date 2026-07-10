@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Quiz | Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<video class="bg-video" autoplay muted loop playsinline>
+    <source src="assets/login.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<header>
+    <div class="logo">
+        🎬 <span>Movie Quiz Challenge</span>
+    </div>
+
+    <button id="musicToggle">
+        🎵 Music
+    </button>
+</header>
+
+<main class="container">
+
+    <section class="login-card">
+
+        <div class="small-title">
+            Welcome Back
+        </div>
+
+        <h1>
+            Student Login
+        </h1>
+
+        <p class="subtitle">
+            Before starting the quiz, please enter your information.
+        </p>
+
+        <form id="loginForm">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input
+                    type="text"
+                    id="fullname"
+                    placeholder="Enter your full name"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label>Student ID</label>
+                <input
+                    type="text"
+                    id="studentid"
+                    placeholder="Enter your student ID"
+                    required>
+            </div>
+
+            <div class="input-group">
+                <label>Class</label>
+
+                <select id="class">
+                    <option value="">Choose your class</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                </select>
+            </div>
+
+            <button class="continue-btn" type="submit">
+                Continue →
+            </button>
+
+        </form>
+
+        <div class="privacy">
+            🔒 Your information is only used to record quiz results.
+        </div>
+
+    </section>
+
+    <section class="right-side">
+
+        <div class="quote">
+
+            <h2>
+                "Sometimes the greatest gift comes in the most unexpected form."
+            </h2>
+
+            <p>
+                Inspired by the short film <b>The Present (2014)</b>.
+            </p>
+
+        </div>
+
+        <div class="trusted-card">
+            ⭐ 30 Questions<br>
+            ⏱ About 20 Minutes<br>
+            ☁ Results saved to Google Sheets
+        </div>
+
+    </section>
+
+</main>
+
+<audio id="bgm" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Quiz | Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/quiz.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+<header class="topbar">
+<div class="logo"><img src="assets/logo.svg" alt=""><h2>Movie Quiz Challenge</h2></div>
+<div class="user-area">
+<div class="profile-avatar">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+width="24"
+height="24"
+viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+stroke-width="2">
+
+<path d="M20 21a8 8 0 0 0-16 0"/>
+<circle cx="12" cy="7" r="4"/>
+
+</svg>
+
+</div><h4 id="studentName">Student Name</h4><span id="studentClass">Class</span></div></div></div>
+</header>
+
+<section class="dashboard">
+<div class="info-card"><span>QUESTION</span><h2><span id="currentQuestion">1</span>/<span id="totalQuestion">30</span></h2></div>
+<div class="info-card progress-card"><span>PROGRESS</span><div class="progress"><div id="progressFill"></div></div><small id="progressText">
+3%
+</small></div>
+<div class="info-card"><span>TIME LEFT</span><h2 id="timer">20:00</h2></div>
+<div class="info-card"><span>SCORE</span><h2><span id="score">0</span> pts</h2></div>
+</section>
+
+<main class="quiz-layout">
+<aside class="sidebar">
+<h3>Questions</h3>
+<div class="legend">
+
+    <div><span class="dot current"></span>Current</div>
+
+    <div><span class="dot correct"></span>Correct</div>
+
+    <div><span class="dot wrong"></span>Wrong</div>
+
+    <div><span class="dot unanswered"></span>Unanswered</div>
+
+</div>
+<div id="questionGrid"></div>
+<div class="sidebar-stats">
+
+<div>
+
+Answered
+
+<span id="answeredCount">
+
+0
+
+</span>
+
+</div>
+
+<div>
+
+Remaining
+
+<span id="remainingCount">
+
+30
+
+</span>
+
+</div>
+
+<div>
+
+Correct
+
+<span id="correctCount">
+
+0
+
+</span>
+
+</div>
+
+</div>
+<div class="tip-box"><h4>💡 Tip</h4><p>Read each question carefully before choosing your answer.</p></div>
+</aside>
+
+<section class="quiz-card">
+<div class="question-top">
+<div class="question-action">
+
+<button id="reportBtn" class="report-btn">
+
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+
+        <path d="M5 3v18"/>
+        <path d="M5 4h10l-2 4 2 4H5"/>
+
+    </svg>
+
+    <span>Report Question</span>
+
+</button>
+
+</div>
+<span id="categoryBadge">Main Idea</span>
+<div id="reportModal" class="modal">
+
+    <div class="report-card">
+
+        <div class="report-header">
+
+            <div class="report-icon">
+                🚩
+            </div>
+
+            <div>
+
+                <h2>Report Question</h2>
+
+                <p>
+                    Found something wrong with this question?
+                    Let us know.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="report-body">
+
+            <label>Reason</label>
+
+            <select id="reportReason">
+
+                <option selected disabled>
+                    Select a reason
+                </option>
+
+                <option>
+                    Grammar / Typo
+                </option>
+
+                <option>
+                    Wrong Answer
+                </option>
+
+                <option>
+                    Question is Unclear
+                </option>
+
+                <option>
+                    Media Problem
+                </option>
+
+                <option>
+                    Other
+                </option>
+
+            </select>
+
+            <label>Additional Notes</label>
+
+            <textarea
+                id="reportMessage"
+                placeholder="Explain the problem..."
+            ></textarea>
+
+        </div>
+
+        <div class="report-footer">
+
+            <button id="cancelReport" class="btn-secondary">
+
+                Cancel
+
+            </button>
+
+            <button id="sendReport" class="btn-primary">
+
+                <span class="btn-text">
+
+                    Submit Report
+
+                </span>
+
+                <span class="btn-loading">
+
+                    <span class="spinner"></span>
+
+                    Sending...
+
+                </span>
+
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</div>
+
+<h1 id="questionText">Question will appear here...</h1>
+<div class="question-status">
+
+    <span id="questionDifficulty">
+        Easy
+    </span>
+
+    <span id="questionPoints">
+        +10 pts
+    </span>
+
+</div>
+
+<div id="mediaContainer"></div>
+
+<div id="answerContainer"></div>
+
+<div class="notice">
+
+💡 Select one answer.
+
+Your answer will be locked after clicking
+<b>Next</b>.
+
+</div>
+
+<div class="navigation">
+<button id="prevBtn">
+← Previous
+</button>
+
+<button id="nextBtn">
+Next →
+</button>
+</div>
+</section>
+</main>
+
+<footer class="quiz-footer">
+
+    <button id="musicBtn" class="footer-btn">
+
+        <i class="fa-solid fa-music"></i>
+
+        Music ON
+
+    </button>
+
+    <div class="footer-message">
+
+        Do your best, enjoy the process, and trust yourself!
+
+        <span>✨</span>
+
+    </div>
+
+    <button id="endQuizBtn" class="footer-btn danger">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        End Quiz
+
+    </button>
+</footer>
+<div class="copyright">
+
+    Movie Quiz Challenge © 2026
+
+</div>
+<audio id="correctSound"
+src="assets/sounds/correct.mp3"></audio>
+
+<audio id="wrongSound"
+src="assets/sounds/wrong.mp3"></audio>
+
+<audio id="clickSound"
+src="assets/sounds/click.mp3"></audio>
+<audio
+id="bgm"
+src="assets/audio/bgm.mp3"
+loop>
+</audio>
+<div id="endModal" class="modal">
+
+    <div class="report-card">
+
+        <div class="report-header">
+
+            <div class="report-icon end-icon">
+
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="30"
+                     height="30"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2">
+
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+                    <polyline points="16 17 21 12 16 7"/>
+                    <line x1="21" y1="12" x2="9" y2="12"/>
+
+                </svg>
+
+            </div>
+
+            <div>
+
+                <h2>Finish Quiz?</h2>
+
+                <p>
+
+                    Once you finish the quiz, your answers will be submitted
+                    and cannot be changed.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="report-footer">
+
+            <button id="cancelEnd" class="btn-secondary">
+
+                Continue Quiz
+
+            </button>
+
+            <button id="confirmEnd" class="btn-danger">
+
+                Finish Quiz
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="js/questions.js"></script>
+<script src="js/quiz.js"></script>
+<div id="toast"></div>
+</body>
+</html>

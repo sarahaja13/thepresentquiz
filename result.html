@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Quiz Challenge | Result</title>
+
+    <link rel="stylesheet"
+          href="css/result.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="page">
+
+<!-- ===========================================
+HEADER
+============================================ -->
+
+<header class="topbar">
+
+    <div class="logo-area">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-clapperboard"></i>
+
+        </div>
+
+        <h2>
+
+            Movie Quiz Challenge
+
+        </h2>
+
+    </div>
+
+    <div class="student-profile">
+
+        <div class="avatar">
+
+            <i class="fa-solid fa-user"></i>
+
+        </div>
+
+        <div>
+
+            <h3 id="studentName">
+
+                Sarah Nabila
+
+            </h3>
+
+            <span id="studentClass">
+
+                Class A
+
+            </span>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ===========================================
+TOP SECTION
+============================================ -->
+
+<section class="top-section">
+
+<!-- LEFT -->
+
+<div class="hero-card">
+
+<div class="hero-center">
+
+<h1>
+
+Great Job,
+<span id="studentNameHero">
+
+Sarah!
+
+</span>
+
+</h1>
+
+<p>
+
+You've completed the Movie Quiz Challenge.
+
+Keep up the amazing work!
+
+</p>
+
+<div class="score-box">
+
+<div class="score-title">
+
+YOUR SCORE
+
+</div>
+
+<div class="score-number">
+
+<span id="score">
+
+270
+
+</span>
+
+<span class="total">
+
+/ 300
+
+</span>
+
+</div>
+
+<div class="score-percent">
+
+90%
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="badge-card">
+
+<div class="badge-icon">
+
+🥇
+
+</div>
+
+<div class="badge-title">
+
+YOUR BADGE
+
+</div>
+
+<h2 id="badgeName">
+
+Movie Expert
+
+</h2>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="summary-card">
+
+<h2>
+
+Summary
+
+</h2>
+
+<div class="summary-item">
+
+<div>
+
+<i class="fa-solid fa-file-lines blue"></i>
+
+Total Questions
+
+</div>
+
+<span>
+
+30
+
+</span>
+
+</div>
+
+<div class="summary-item">
+
+<div>
+
+<i class="fa-solid fa-circle-check green"></i>
+
+Correct Answers
+
+</div>
+
+<span id="correctCount">
+
+27
+
+</span>
+
+</div>
+
+<div class="summary-item">
+
+<div>
+
+<i class="fa-solid fa-circle-xmark red"></i>
+
+Wrong Answers
+
+</div>
+
+<span id="wrongCount">
+
+3
+
+</span>
+
+</div>
+
+<div class="summary-item">
+
+<div>
+
+<i class="fa-solid fa-circle-minus gray"></i>
+
+Unanswered
+
+</div>
+
+<span id="unansweredCount">
+
+0
+
+</span>
+
+</div>
+
+<div class="summary-item">
+
+<div>
+
+<i class="fa-solid fa-clock purple"></i>
+
+Time Taken
+
+</div>
+
+<span id="timeTaken">
+
+18:32
+
+</span>
+
+</div>
+
+<div class="summary-item">
+
+<div>
+
+<i class="fa-solid fa-hourglass-half purple"></i>
+
+Total Time
+
+</div>
+
+<span>
+
+20:00
+
+</span>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===========================================
+PART 2 AKAN MULAI DARI SINI
+============================================ -->
+
+<section class="bottom-section">
+
+<!-- Performance Overview -->
+
+<!-- ===========================================
+PERFORMANCE OVERVIEW
+============================================ -->
+
+<div class="performance-card">
+
+    <h2>
+
+        Performance Overview
+
+    </h2>
+
+    <div class="performance-content">
+
+        <div class="progress-ring">
+
+            <svg width="220"
+                 height="220">
+
+                <circle
+                    cx="110"
+                    cy="110"
+                    r="85"
+                    class="ring-bg">
+
+                </circle>
+
+                <circle
+                    cx="110"
+                    cy="110"
+                    r="85"
+                    id="progressCircle"
+                    class="ring-progress">
+
+                </circle>
+
+            </svg>
+
+            <div class="ring-center">
+
+                <h1 id="percentage">
+
+                    90%
+
+                </h1>
+
+                <span>
+
+                    Overall Score
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="performance-detail">
+
+            <div class="detail-row">
+
+                <span>
+
+                    <i class="fa-solid fa-circle green"></i>
+
+                    Correct
+
+                </span>
+
+                <strong id="correctPercent">
+
+                    27 (90%)
+
+                </strong>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span>
+
+                    <i class="fa-solid fa-circle red"></i>
+
+                    Wrong
+
+                </span>
+
+                <strong id="wrongPercent">
+
+                    3 (10%)
+
+                </strong>
+
+            </div>
+
+            <div class="detail-row">
+
+                <span>
+
+                    <i class="fa-solid fa-circle gray"></i>
+
+                    Unanswered
+
+                </span>
+
+                <strong id="unansweredPercent">
+
+                    0 (0%)
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="feedback-card">
+
+        <div class="feedback-icon">
+
+            🎉
+
+        </div>
+
+        <div>
+
+            <h3 id="feedbackTitle">
+
+                Excellent!
+
+            </h3>
+
+            <p id="feedbackText">
+
+                You have an excellent understanding
+                of the movie.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Question Review -->
+
+<!-- ===========================================
+QUESTION REVIEW
+============================================ -->
+
+<div class="review-card">
+
+    <div class="review-header">
+
+        <h2>
+
+            Question Review
+
+        </h2>
+
+        <div class="review-filter">
+
+            <button id="filterAll"
+                    class="active">
+
+                All (30)
+
+            </button>
+
+            <button id="filterCorrect">
+
+                Correct
+
+            </button>
+
+            <button id="filterWrong">
+
+                Wrong
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="reviewList">
+
+        <!-- JS -->
+
+    </div>
+
+    <div class="review-footer">
+
+        <button id="viewAllBtn">
+
+            View All Questions
+
+            <i class="fa-solid fa-angle-down"></i>
+
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- Footer Buttons -->
+
+<!-- ===========================================
+BOTTOM BUTTONS
+============================================ -->
+
+<section class="bottom-buttons">
+
+<button id="homeBtn">
+
+<i class="fa-solid fa-house"></i>
+
+Back to Home
+
+</button>
+
+<button id="retakeBtn">
+
+<i class="fa-solid fa-rotate-right"></i>
+
+Retake Quiz
+
+</button>
+
+</section>
+
+<footer>
+
+</footer>
+
+</div>
+<div id="toast"
+     class="toast">
+
+</div>
+<canvas id="confettiCanvas">
+
+</canvas>
+<script src="js/questions.js"></script>
+<script src="js/result.js"></script>
+
+</body>
+
+</html>

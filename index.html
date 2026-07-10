@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Present | Movie Quiz</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- LOADING SCREEN -->
+    <!-- ========================= -->
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <i class="fa-solid fa-clapperboard"></i>
+
+            <h2>Movie Quiz Challenge</h2>
+
+            <div class="loading-bar">
+
+                <div class="loading-progress"></div>
+
+            </div>
+
+            <p>Loading...</p>
+
+        </div>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- BACKGROUND VIDEO -->
+    <!-- ========================= -->
+
+    <video class="hero-video" autoplay muted loop playsinline>
+
+        <source src="assets/hero.mp4" type="video/mp4">
+
+    </video>
+
+    <div class="video-overlay"></div>
+
+    <!-- ========================= -->
+    <!-- HEADER -->
+    <!-- ========================= -->
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-clapperboard"></i>
+
+            <span>Movie Quiz Challenge</span>
+
+        </div>
+
+        <button class="music-btn" id="musicToggle">
+
+            <i class="fa-solid fa-music"></i>
+
+            <span>ON</span>
+
+        </button>
+
+    </header>
+
+    <!-- ========================= -->
+    <!-- HERO -->
+    <!-- ========================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-left">
+
+                <div class="badge">
+
+                    ⭐ Interactive Quiz
+
+                </div>
+
+                <h1>
+
+                    The
+
+                    <span>Present</span>
+
+                </h1>
+
+                <div class="movie-year">
+
+                    (2014)
+
+                </div>
+
+                <p>
+
+                    Test how well you understand the short film and its meaningful message about acceptance, empathy,
+                    and seeing beauty in our differences.
+
+                </p>
+
+                <button class="start-btn" id="startQuiz">
+
+                    <i class="fa-solid fa-circle-play"></i>
+
+                    START QUIZ
+
+                </button>
+
+                <div class="start-caption">
+
+                    <i class="fa-solid fa-arrow-right-long"></i>
+
+                    Let's see how much you understood the short film!
+
+                </div>
+
+            </div>
+
+            <div class="hero-right">
+
+                <!-- kosong -->
+                <!-- video menjadi background -->
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- INFO CARD -->
+        <!-- ========================= -->
+
+        <section class="info-section">
+
+            <div class="info-card">
+
+                <div class="icon blue">
+
+                    <i class="fa-solid fa-circle-question"></i>
+
+                </div>
+
+                <h3>30 Questions</h3>
+
+                <p>Multiple Choice</p>
+
+            </div>
+
+            <div class="info-card">
+
+                <div class="icon green">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                </div>
+
+                <h3>~20 Minutes</h3>
+
+                <p>Estimated Time</p>
+
+            </div>
+
+            <div class="info-card">
+
+                <div class="icon yellow">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                </div>
+
+                <h3>300 Points</h3>
+
+                <p>Total Score</p>
+
+            </div>
+
+            <div class="info-card">
+
+                <div class="icon purple">
+
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                </div>
+
+                <h3>Results Saved</h3>
+
+                <p>Google Sheets</p>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- FOOTER -->
+        <!-- ========================= -->
+
+        <footer>
+
+            <div class="save-info">
+
+                <i class="fa-solid fa-lock"></i>
+
+                Your results will be saved securely in
+
+                <span>Google Sheets.</span>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+    <!-- ========================= -->
+    <!-- FLOATING PARTICLES -->
+    <!-- ========================= -->
+
+    <div class="particles">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- AUDIO -->
+    <!-- ========================= -->
+
+    <audio id="bgm" loop>
+
+        <source src="assets/music.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <!-- JS -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
